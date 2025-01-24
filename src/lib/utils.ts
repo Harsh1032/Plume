@@ -48,7 +48,7 @@ export function constructMetadata({
       creator: "@sujan"
     },
     icons,
-    metadataBase: new URL('http://localhost:3000'),
+    metadataBase: new URL('https://plumeflower.netlify.app'),
     ...(noIndex && {
       robots: {
         index: false,
