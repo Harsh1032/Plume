@@ -42,7 +42,7 @@ export const Dashboard = ({ subscriptionPlan }: DashboardProps) => {
               .sort(
                 (a, b) =>
                   new Date(b.createdAt).getTime() -
-                  new Date(a.createdAt).getTime(),
+                  new Date(a.createdAt).getTime()
               )
               .map((file) => (
                 <li
@@ -73,6 +73,11 @@ export const Dashboard = ({ subscriptionPlan }: DashboardProps) => {
                     <div className="flex items-center gap-2">
                       <Plus className="h-4 w-4" />
                       {format(new Date(file.createdAt), "MMM yyyy")}
+                    </div>
+
+                    <div className="flex items-center gap-2">
+                      <MessageSquare className="h-4 w-4" />
+                      mocked
                     </div>
 
                     {/* <div className="flex items-center gap-2">
