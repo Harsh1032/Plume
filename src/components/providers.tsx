@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 import { type PropsWithChildren, useState } from "react";
 
 import { trpc } from "@/app/_trpc/client";
+import { absoluteUrl } from "@/lib/utils";
 
 export const Providers = ({ children }: PropsWithChildren) => {
   const router = useRouter();
@@ -28,7 +29,7 @@ export const Providers = ({ children }: PropsWithChildren) => {
     trpc.createClient({
       links: [
         httpBatchLink({
-          url: "/api/trpc",
+          url: absoluteUrl("/api/trpc"),
         }),
       ],
     }),
